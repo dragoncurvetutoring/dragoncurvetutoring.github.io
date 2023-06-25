@@ -98,3 +98,10 @@ a {
     margin-bottom: 1rem;
     color: white;
 	}
+
+	.carousel-indicators {
+		bottom: 0;  /* Adjust this value if needed */
+		transform: translateX(-50%);
+		left: 40%;
+		width: auto;
+	  }
