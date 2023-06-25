@@ -43,3 +43,29 @@ body {
 
 	padding-top:10em!important;
 }
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+  a:visited {
+	color: grey;
+	text-decoration: none;
+    background-color: transparent;
+  }
+  
+  /* mouse over link */
+  a:hover {
+	color: grey;
+	text-decoration: none;
+    background-color: transparent;
+  }
+  
+  /* selected link */
+  a:active {
+	color: grey;
+	text-decoration: none;
+    background-color: transparent;
+  }
