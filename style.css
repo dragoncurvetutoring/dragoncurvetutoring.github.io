@@ -1,6 +1,7 @@
 body {
 	font-family: 'Open Sans', sans-serif ;
 	background-color: #252525;
+	color: #ffffff;
 }
 
 .site-logo {
@@ -32,6 +33,8 @@ body {
 #mathclass.p-4 {
 
 	padding-top:10em!important;
+	color: #ffffff;
+	font-family: 'Open Sans', sans-serif ;
 }
 
 #csclass.p-4 {
@@ -68,4 +71,24 @@ a {
 	color: grey;
 	text-decoration: none;
     background-color: transparent;
+  }
+
+  .carousel-fade .carousel-item, .carousel-item img  {
+	max-height: 85vh;
+  }
+
+  .carousel-indicators {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	left: 0;
+	z-index: 15;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	padding-left: 0;
+	margin-right: 15%;
+	margin-left: 10%;
+	list-style: none;
   }
