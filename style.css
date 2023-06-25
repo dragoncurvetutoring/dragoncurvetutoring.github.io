@@ -97,11 +97,26 @@ a {
     margin-top: 0;
     margin-bottom: 1rem;
     color: white;
-	}
+}
 
-	.carousel-indicators {
-		bottom: 0;  /* Adjust this value if needed */
-		transform: translateX(-50%);
-		left: 40%;
-		width: auto;
-	  }
+.carousel-indicators {
+	bottom: 0;  /* Adjust this value if needed */
+	transform: translateX(-50%);
+	left: 40%;
+	width: auto;
+}
+
+.imgbox {
+	width: 100%;
+	height: 0;
+	padding-top: 56.25%; /* Adjust the padding-top value based on the aspect ratio of your image */
+	background-image: url(img/classesheader.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+  }
+  
+  
+  
+  
+  
