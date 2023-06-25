@@ -102,6 +102,6 @@ a {
 	.carousel-indicators {
 		bottom: 0;  /* Adjust this value if needed */
 		transform: translateX(-50%);
-		left: 40%;
+		left: 50%;
 		width: auto;
 	  }
