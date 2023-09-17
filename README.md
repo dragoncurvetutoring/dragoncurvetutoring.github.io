@@ -1,1 +1,0 @@
-# Dragon Curve Tutoring
