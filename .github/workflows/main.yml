@@ -26,6 +26,7 @@ jobs:
     - name: "Deploy"
       uses: milanmk/actions-file-deployer@master
       with:
+        local-path: /home/runner/work/dragoncurvetutoring.github.io/dragoncurvetutoring.github.io
         remote-protocol: "sftp"
         remote-host: ${{ secrets.server }}
         remote-user: ${{ secrets.username }}
