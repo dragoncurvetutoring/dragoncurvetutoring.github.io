@@ -1,241 +1,339 @@
 <!DOCTYPE html>
-<html  >
-<head>
-  <!-- Site made with Mobirise Website Builder v5.9.6, https://mobirise.com -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Mobirise v5.9.6, mobirise.com">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="assets/images/slide1-96x54.png" type="image/x-icon">
-  <meta name="description" content="">
-  
-  
-  <title>Graph Theory</title>
-  <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
-  <link rel="stylesheet" href="assets/dropdown/css/style.css">
-  <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
-  <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+<html>
+  <head>
+    <!-- Site made with Mobirise Website Builder v5.9.6, https://mobirise.com -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="generator" content="Mobirise v5.9.6, mobirise.com" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1"
+    />
+    <link
+      rel="shortcut icon"
+      href="assets/images/slide1-96x54.png"
+      type="image/x-icon"
+    />
+    <meta name="description" content="" />
 
-  
-  
-  
-</head>
-<body>
-  
-  <section data-bs-version="5.1" class="menu menu2 cid-tQ9ji5jj1p" once="menu" id="menu02-16">
-	
+    <title>Graph Theory</title>
+    <link
+      rel="stylesheet"
+      href="assets/web/assets/mobirise-icons2/mobirise2.css"
+    />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css" />
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap/css/bootstrap-reboot.min.css"
+    />
+    <link rel="stylesheet" href="assets/dropdown/css/style.css" />
+    <link rel="stylesheet" href="assets/theme/css/style.css" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+    /></noscript>
+    <link
+      rel="preload"
+      as="style"
+      href="assets/mobirise/css/mbr-additional.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/mobirise/css/mbr-additional.css"
+      type="text/css"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("header.html")
+      })
+    </script>
+  </head>
+  <body>
+    <div id="header"></div>
 
-	<nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-		<div class="container">
-			<div class="navbar-brand">
-				<span class="navbar-logo">
-					<a href="https://mobiri.se">
-						<img src="assets/images/slide1-96x54.png" alt="Mobirise Website Builder" style="height: 3rem;">
-					</a>
-				</span>
-				<span class="navbar-caption-wrap"><a class="navbar-caption text-primary display-4" href="index.html">Dragon Curve Tutoring</a></span>
-			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-				<div class="hamburger">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-						<a class="nav-link link text-primary display-4" href="aboutus.html">About Us</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link link text-primary display-4" href="classes.html" aria-expanded="false">Classes</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link link text-primary display-4" href="ourteam.html">Our Team</a>
-					</li><li class="nav-item"><a class="nav-link link text-primary display-4" href="news.html">Our Blog</a></li><li class="nav-item"><a class="nav-link link text-primary display-4" href="contactus.html">Contact Us</a></li></ul>
-				<div class="icons-menu">
-					<a class="iconfont-wrapper" href="tel:‪(240) 753-0872">
-						<span class="p-2 mbr-iconfont mobi-mbri-phone mobi-mbri" style="color: rgb(89, 104, 136); fill: rgb(89, 104, 136);"></span>
-					</a>
-					<a class="iconfont-wrapper" href="mailto:info@dragoncurvetutoring.org">
-						<span class="p-2 mbr-iconfont mobi-mbri-letter mobi-mbri" style="color: rgb(89, 104, 136); fill: rgb(89, 104, 136);"></span>
-					</a>
-					<a class="iconfont-wrapper" href="https://www.google.com/maps/dir//rockville+memorial+library/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89b7cd74527da3d1:0x15a1c1d08fd1f619?sa=X&ved=2ahUKEwim6eevgrOBAxXE8LsIHbqlCuwQ9Rd6BAhVEAA&ved=2ahUKEwim6eevgrOBAxXE8LsIHbqlCuwQ9Rd6BAhjEAU">
-						<span class="p-2 mbr-iconfont mobi-mbri-map-pin mobi-mbri" style="color: rgb(89, 104, 136); fill: rgb(89, 104, 136);"></span>
-					</a>
-					
-				</div>
-				<div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary-outline display-4" href="https://forms.gle/63r2BoaETb6b6cvUA">Register!</a></div>
-			</div>
-		</div>
-	</nav>
-</section>
+    <section
+      data-bs-version="5.1"
+      class="image4 cid-tQfkJyeyGn"
+      id="image04-18"
+    >
+      <div class="image-block m-auto">
+        <img src="assets/images/graphtheory-1440x370.png" alt="Mobirise" />
+      </div>
+    </section>
 
-<section data-bs-version="5.1" class="image4 cid-tQfkJyeyGn" id="image04-18">
-    
-
-    <div class="image-block m-auto">
-        <img src="assets/images/graphtheory-1440x370.png" alt="Mobirise">
-        
-    </div>
-</section>
-
-<section data-bs-version="5.1" class="article12 cid-tQfltGlZMC" id="article12-1b">    
-    
-    <div class="container">
+    <section
+      data-bs-version="5.1"
+      class="article12 cid-tQfltGlZMC"
+      id="article12-1b"
+    >
+      <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-10">
-                <h3 class="mbr-section-title mbr-fonts-style mb-4 mt-0 display-2">
-                <strong>What is Graph Theory?</strong></h3>
-                
-                <p class="mbr-text mbr-fonts-style display-7">Graph Theory is the exploration of numerical structures that describe connections between objects. Graphs are made up of dots (called <strong>vertices</strong>) and lines (called <strong>edges</strong>) that connect the dots. Each dot represents something, and the lines show how these things are related. <br><br>By looking at the connections between the dots, we can understand how they are organized and how we can move from one dot to another. This helps us find paths or routes through the structure. Graph Theory has many real-life applications and helps us solve problems by understanding and analyzing these connections in a simple and organized way.<br></p>
-            </div>
+          <div class="col-md-12 col-lg-10">
+            <h3 class="mbr-section-title mbr-fonts-style mb-4 mt-0 display-2">
+              <strong>What is Graph Theory?</strong>
+            </h3>
+
+            <p class="mbr-text mbr-fonts-style display-7">
+              Graph Theory is the exploration of numerical structures that
+              describe connections between objects. Graphs are made up of dots
+              (called <strong>vertices</strong>) and lines (called
+              <strong>edges</strong>) that connect the dots. Each dot represents
+              something, and the lines show how these things are related.
+              <br /><br />By looking at the connections between the dots, we can
+              understand how they are organized and how we can move from one dot
+              to another. This helps us find paths or routes through the
+              structure. Graph Theory has many real-life applications and helps
+              us solve problems by understanding and analyzing these connections
+              in a simple and organized way.<br />
+            </p>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section data-bs-version="5.1" class="article4 cid-tQfkSBRPuy" id="article04-1a">
-	
-
-	
-	
-
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-12 col-lg-5 image-wrapper">
-				<img class="w-100" src="assets/images/screen-shot-2023-09-18-at-1.58.40-pm-1036x568.png" alt="Mobirise Website Builder">
-			</div>
-			<div class="col-12 col-md-12 col-lg">
-				<div class="text-wrapper align-left">
-					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2"><strong>Types of Graphs</strong></h1>
-					<p class="mbr-text mbr-fonts-style mb-4 display-7">
-						An <strong>Euler Path</strong> is a route through a connected graph such that each edge of the graph is used exactly once. An <strong>Euler Circuit</strong> is a special type of Euler path where the route starts and ends on the same point. The properties of these graphs are used to solve problems about optimizing circuits.<br><br>We can determine whether a graph has a Eulerian path or circuit by looking at the <strong>degree</strong> of the vertices. The <strong>degree of a vertex</strong> is the number of edges connected to it. <br><br>A graph will contain an Eulerian path if there are <strong>no more than two vertices</strong> with odd degree. Similarly, a graph will contain a Eulerian cycle if <strong>every vertex</strong> has an even degree.<br> 
-					</p>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section data-bs-version="5.1" class="article2 cid-tQfAhq4oeZ" id="article02-1c">
-	
-
-	
-	
-
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-12 col-lg-5 image-wrapper">
-				<img class="w-100" src="assets/images/screen-shot-2023-09-18-at-1.58.46-pm-996x518.png" alt="Mobirise Website Builder">
-			</div>
-			<div class="col-12 col-md-12 col-lg">
-				<div class="text-wrapper align-left">
-					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-						<strong>Matrix Notation</strong></h1>
-					<p class="mbr-text align-left mbr-fonts-style mb-4 display-7">
-					We can depict graphs in <strong>matrix notation</strong>. A matrix is a rectangular array of numbers. An adjacency matrix is a matrix that is used to represent a graph. The numbers in the matrix  represent the number of edges between two vertices.<br><br>We can determine whether a graph has an Euler circuit by looking at its adjacency matrix. By summing all numbers in a row, we can find the degree of a vertex. If all of the row sums are even, we can say that the graph has an Euler circuit.<br>
-					</p>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section data-bs-version="5.1" class="article4 cid-tQfABosClV" id="article04-1d">
-	
-
-	
-	
-
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-12 col-lg-5 image-wrapper">
-				<img class="w-100" src="assets/images/screen-shot-2023-09-18-at-1.58.51-pm-534x432.png" alt="Mobirise Website Builder">
-			</div>
-			<div class="col-12 col-md-12 col-lg">
-				<div class="text-wrapper align-left">
-					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-						<strong>Graph Coloring</strong></h1>
-					<p class="mbr-text mbr-fonts-style mb-4 display-7">Vertex coloring is a technique that uses graphs to solve problems related to avoiding conflicts. In this method, we assign different colors to the vertices of a graph, ensuring that no two adjacent vertices have the same color. The goal is to minimize the amount of colors needed. <br><br>Graph coloring enables us to address issues related to resource allocation, scheduling, and task assignment.<br><br>An example of this is assigning radio frequencies. We can represent radio stations with vertices and signal interferences with edges. Using graph coloring techniques, we can ensure that no two adjacent stations share the same frequency while minimizing the number of different frequencies used to avoid signal interference.<br></p>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section data-bs-version="5.1" class="article2 cid-tQfB1dyDXi" id="article02-1f">
-	
-
-	
-	
-
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-12 col-lg-5 image-wrapper">
-				<img class="w-100" src="assets/images/screen-shot-2023-09-18-at-1.58.55-pm-1036x448.png" alt="Mobirise Website Builder">
-			</div>
-			<div class="col-12 col-md-12 col-lg">
-				<div class="text-wrapper align-left">
-					<h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
-						<strong>Real-life Applications of Graph Theory</strong></h1>
-					<p class="mbr-text align-left mbr-fonts-style mb-4 display-7">Graph Theory is a field of mathematics that has many practical uses in real life. One famous example is the Seven Bridges of Königsberg problem. <br><br>In 1736, mathematician Leonhard Euler showed that it was impossible to walk through a city and cross each of its seven bridges exactly once. This discovery highlighted the significance of graph theory in solving real-world problems.<br><br>Graph theory is applied in everyday life, like in Google Maps. By representing road networks as <strong>multi-graphs</strong>, Google Maps considers factors such as different routes, lanes, and road types. Algorithms analyze the network efficiently, considering real-time traffic and user preferences. This helps Google Maps provide accurate directions, guiding users along the most efficient path to their destination.<br><br>Social media networks, often classified as <strong>star graphs</strong>, represent connections between individuals. In this structure, a central node (celebrity or influencer) is connected to multiple peripheral nodes (followers). The central node has a high degree, while the peripheral nodes have lower degrees. This hierarchy gives the central individual higher visibility and reach.</p>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section data-bs-version="5.1" class="article12 cid-tQfAHXbihd" id="article12-1e">    
-    
-    <div class="container">
+    <section
+      data-bs-version="5.1"
+      class="article4 cid-tQfkSBRPuy"
+      id="article04-1a"
+    >
+      <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-10">
-                <h3 class="mbr-section-title mbr-fonts-style mb-4 mt-0 display-2">
-                <strong>Why is Graph Theory Important?</strong></h3>
-                
-                <p class="mbr-text mbr-fonts-style display-7">Graph Theory helps us understand and solve problems involving connections and relationships. It provides a way to represent and analyze systems like social networks, transportation networks, and computer networks. <br><br>With graph theory, we can find efficient paths, identify patterns, and optimize resource allocation. It allows us to make better decisions and solve complex problems in a structured way.<br><br>This was a very surface-level introduction to Graph Theory. Thank you for reading our article, and we hope you found something interesting!</p>
+          <div class="col-12 col-md-12 col-lg-5 image-wrapper">
+            <img
+              class="w-100"
+              src="assets/images/screen-shot-2023-09-18-at-1.58.40-pm-1036x568.png"
+              alt="Mobirise Website Builder"
+            />
+          </div>
+          <div class="col-12 col-md-12 col-lg">
+            <div class="text-wrapper align-left">
+              <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                <strong>Types of Graphs</strong>
+              </h1>
+              <p class="mbr-text mbr-fonts-style mb-4 display-7">
+                An <strong>Euler Path</strong> is a route through a connected
+                graph such that each edge of the graph is used exactly once. An
+                <strong>Euler Circuit</strong> is a special type of Euler path
+                where the route starts and ends on the same point. The
+                properties of these graphs are used to solve problems about
+                optimizing circuits.<br /><br />We can determine whether a graph
+                has a Eulerian path or circuit by looking at the
+                <strong>degree</strong> of the vertices. The
+                <strong>degree of a vertex</strong> is the number of edges
+                connected to it. <br /><br />A graph will contain an Eulerian
+                path if there are
+                <strong>no more than two vertices</strong> with odd degree.
+                Similarly, a graph will contain a Eulerian cycle if
+                <strong>every vertex</strong> has an even degree.<br />
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section data-bs-version="5.1" class="article16 cid-tQjHn2vcfb" id="article16-1k">
-    
-    <div class="container">
+    <section
+      data-bs-version="5.1"
+      class="article2 cid-tQfAhq4oeZ"
+      id="article02-1c"
+    >
+      <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-12 col-lg-10">
-                <div class="mbr-section-btn align-center"><a class="btn btn-primary display-4" href="news.html#article02-13">Back to Our Blog&nbsp;</a></div>
+          <div class="col-12 col-md-12 col-lg-5 image-wrapper">
+            <img
+              class="w-100"
+              src="assets/images/screen-shot-2023-09-18-at-1.58.46-pm-996x518.png"
+              alt="Mobirise Website Builder"
+            />
+          </div>
+          <div class="col-12 col-md-12 col-lg">
+            <div class="text-wrapper align-left">
+              <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                <strong>Matrix Notation</strong>
+              </h1>
+              <p class="mbr-text align-left mbr-fonts-style mb-4 display-7">
+                We can depict graphs in <strong>matrix notation</strong>. A
+                matrix is a rectangular array of numbers. An adjacency matrix is
+                a matrix that is used to represent a graph. The numbers in the
+                matrix represent the number of edges between two vertices.<br /><br />We
+                can determine whether a graph has an Euler circuit by looking at
+                its adjacency matrix. By summing all numbers in a row, we can
+                find the degree of a vertex. If all of the row sums are even, we
+                can say that the graph has an Euler circuit.<br />
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section data-bs-version="5.1" class="footer4 cid-tQ9ZwLCGg8" once="footers" id="footer04-17">
+    <section
+      data-bs-version="5.1"
+      class="article4 cid-tQfABosClV"
+      id="article04-1d"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-12 col-lg-5 image-wrapper">
+            <img
+              class="w-100"
+              src="assets/images/screen-shot-2023-09-18-at-1.58.51-pm-534x432.png"
+              alt="Mobirise Website Builder"
+            />
+          </div>
+          <div class="col-12 col-md-12 col-lg">
+            <div class="text-wrapper align-left">
+              <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                <strong>Graph Coloring</strong>
+              </h1>
+              <p class="mbr-text mbr-fonts-style mb-4 display-7">
+                Vertex coloring is a technique that uses graphs to solve
+                problems related to avoiding conflicts. In this method, we
+                assign different colors to the vertices of a graph, ensuring
+                that no two adjacent vertices have the same color. The goal is
+                to minimize the amount of colors needed. <br /><br />Graph
+                coloring enables us to address issues related to resource
+                allocation, scheduling, and task assignment.<br /><br />An
+                example of this is assigning radio frequencies. We can represent
+                radio stations with vertices and signal interferences with
+                edges. Using graph coloring techniques, we can ensure that no
+                two adjacent stations share the same frequency while minimizing
+                the number of different frequencies used to avoid signal
+                interference.<br />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    
+    <section
+      data-bs-version="5.1"
+      class="article2 cid-tQfB1dyDXi"
+      id="article02-1f"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-12 col-lg-5 image-wrapper">
+            <img
+              class="w-100"
+              src="assets/images/screen-shot-2023-09-18-at-1.58.55-pm-1036x448.png"
+              alt="Mobirise Website Builder"
+            />
+          </div>
+          <div class="col-12 col-md-12 col-lg">
+            <div class="text-wrapper align-left">
+              <h1 class="mbr-section-title mbr-fonts-style mb-4 display-2">
+                <strong>Real-life Applications of Graph Theory</strong>
+              </h1>
+              <p class="mbr-text align-left mbr-fonts-style mb-4 display-7">
+                Graph Theory is a field of mathematics that has many practical
+                uses in real life. One famous example is the Seven Bridges of
+                Königsberg problem. <br /><br />In 1736, mathematician Leonhard
+                Euler showed that it was impossible to walk through a city and
+                cross each of its seven bridges exactly once. This discovery
+                highlighted the significance of graph theory in solving
+                real-world problems.<br /><br />Graph theory is applied in
+                everyday life, like in Google Maps. By representing road
+                networks as <strong>multi-graphs</strong>, Google Maps considers
+                factors such as different routes, lanes, and road types.
+                Algorithms analyze the network efficiently, considering
+                real-time traffic and user preferences. This helps Google Maps
+                provide accurate directions, guiding users along the most
+                efficient path to their destination.<br /><br />Social media
+                networks, often classified as <strong>star graphs</strong>,
+                represent connections between individuals. In this structure, a
+                central node (celebrity or influencer) is connected to multiple
+                peripheral nodes (followers). The central node has a high
+                degree, while the peripheral nodes have lower degrees. This
+                hierarchy gives the central individual higher visibility and
+                reach.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    
+    <section
+      data-bs-version="5.1"
+      class="article12 cid-tQfAHXbihd"
+      id="article12-1e"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 col-lg-10">
+            <h3 class="mbr-section-title mbr-fonts-style mb-4 mt-0 display-2">
+              <strong>Why is Graph Theory Important?</strong>
+            </h3>
 
-    <div class="container">
+            <p class="mbr-text mbr-fonts-style display-7">
+              Graph Theory helps us understand and solve problems involving
+              connections and relationships. It provides a way to represent and
+              analyze systems like social networks, transportation networks, and
+              computer networks. <br /><br />With graph theory, we can find
+              efficient paths, identify patterns, and optimize resource
+              allocation. It allows us to make better decisions and solve
+              complex problems in a structured way.<br /><br />This was a very
+              surface-level introduction to Graph Theory. Thank you for reading
+              our article, and we hope you found something interesting!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-bs-version="5.1"
+      class="article16 cid-tQjHn2vcfb"
+      id="article16-1k"
+    >
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-12 col-lg-10">
+            <div class="mbr-section-btn align-center">
+              <a class="btn btn-primary display-4" href="news.html#article02-13"
+                >Back to Our Blog&nbsp;</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      data-bs-version="5.1"
+      class="footer4 cid-tQ9ZwLCGg8"
+      once="footers"
+      id="footer04-17"
+    >
+      <div class="container">
         <div class="media-container-row align-center mbr-white">
-            <div class="col-12">
-                <p class="mbr-text mb-0 mbr-fonts-style display-7">
-                    © Copyright 2024 Dragon Curve Tutoring - All Rights Reserved
-                </p>
-            </div>
+          <div class="col-12">
+            <p class="mbr-text mb-0 mbr-fonts-style display-7">
+              © Copyright 2024 Dragon Curve Tutoring - All Rights Reserved
+            </p>
+          </div>
         </div>
-    </div>
-</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
-  
-  
-</body>
+      </div>
+    </section>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/smoothscroll/smooth-scroll.js"></script>
+    <script src="assets/ytplayer/index.js"></script>
+    <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+    <script src="assets/theme/js/script.js"></script>
+  </body>
 </html>
