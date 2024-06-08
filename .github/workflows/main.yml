@@ -16,6 +16,6 @@ jobs:
         user: ${{ secrets.username }}
         pass: ${{ secrets.password }}
         remoteDir: '/dragoncurvetutoring.org'
-        exclude: |
+        ignoreFile: |
           **/.git*
           **/.git*/**
