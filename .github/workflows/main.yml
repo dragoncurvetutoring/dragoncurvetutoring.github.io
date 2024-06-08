@@ -12,7 +12,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: iad1-shared-e1-21.dreamhost.com
-        protocol: ftps
+        protocol: sftp
         port: 22
         username: dh_gkeg59
         password: ${{ secrets.password }}
