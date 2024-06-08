@@ -15,7 +15,7 @@ jobs:
         port: ${{ secrets.port }}
         user: ${{ secrets.username }}
         pass: ${{ secrets.password }}
-        remoteDir: '/dragoncurvetutoring.org/'
+        remoteDir: '/test/'
         ignoreFile: |
           **/.git*
           **/.github*
