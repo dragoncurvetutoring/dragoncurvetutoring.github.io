@@ -7,15 +7,15 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
-    
-    - name: Deploy to DEV Server
-      uses: pressidium/lftp-mirror-action@v1
+
+    - name: "Deploy"
+      uses: milanmk/actions-file-deployer@master
       with:
-        host: ${{ secrets.server }}
-        port: ${{ secrets.port }}
-        user: ${{ secrets.username }}
-        pass: ${{ secrets.password }}
-        remoteDir: '/'
+        remote-protocol: "sftp"
+        remote-host: ${{ secrets.server }}
+        remote-user: ${{ secrets.username }}
+        remote-password: ${{ secrets.password }}
+        remote-path: "/test"
         ignoreFile: |
           **/.git*
           **/.github*
