@@ -8,15 +8,14 @@ jobs:
     - name: 🚚 Get latest code
       uses: actions/checkout@v4
     
-    - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+    - name: Deploy to DEV Server
+      uses: pressidium/lftp-mirror-action@v1
       with:
-        server: iad1-shared-e1-21.dreamhost.com
-        protocol: sftp
-        port: 22
-        username: dh_gkeg59
-        password: ${{ secrets.password }}
-        server-dir: dragoncurvetutoring.org/
+        host: ${{ secrets.server }}
+        port: ${{ secrets.port }}
+        user: ${{ secrets.username }}
+        pass: ${{ secrets.password }}
+        remoteDir: '/dragoncurvetutoring.org'
         exclude: |
           **/.git*
           **/.git*/**
