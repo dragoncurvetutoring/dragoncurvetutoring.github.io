@@ -1,34 +1,19 @@
-name: Deploy Files
-
-on:
-  push:
-    branches:
-      - master
-  # Enables manually triggering of Workflow with file synchronization option
-  workflow_dispatch:
-    inputs:
-      sync:
-        description: "File synchronization"
-        required: true
+on: [push]
 
 jobs:
-  deploy-master:
-    name: "master branch"
-    if: ${{ github.ref == 'refs/heads/master' }}
+  deploy_job:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    name: deploy
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: deploy file
+      uses: wlixcc/SFTP-Deploy-Action@v1.2.4
       with:
-        fetch-depth: 0
-    - name: "Deploy"
-      uses: milanmk/actions-file-deployer@master
-      with:
-        local-path: /home/runner/work/dragoncurvetutoring.github.io/dragoncurvetutoring.github.io
-        remote-protocol: "sftp"
-        remote-host: ${{ secrets.server }}
-        remote-user: ${{ secrets.username }}
-        remote-password: ${{ secrets.password }}
-        remote-path: "/test"
+          username:  ${{ secrets.username }}
+          server: ${{ secrets.server }}
+          password: ${{ secrets.password }}
+          local_path: './*'
+          remote_path: "/test"
+          sftpArgs: '-o ConnectTimeout=5'
 
