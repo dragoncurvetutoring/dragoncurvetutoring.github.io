@@ -15,7 +15,7 @@ jobs:
         port: ${{ secrets.port }}
         user: ${{ secrets.username }}
         pass: ${{ secrets.password }}
-        remoteDir: '/test/'
+        remoteDir: '/'
         ignoreFile: |
           **/.git*
           **/.github*
