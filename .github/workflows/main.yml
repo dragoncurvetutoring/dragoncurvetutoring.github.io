@@ -14,3 +14,6 @@ jobs:
         server: iad1-shared-e1-21.dreamhost.com
         username: dh_gkeg59
         password: ${{ secrets.ftp_password }}
+        exclude: |
+          **/.git*
+          **/.git*/**
