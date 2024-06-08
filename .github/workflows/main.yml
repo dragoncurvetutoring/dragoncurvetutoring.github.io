@@ -14,6 +14,6 @@ jobs:
           server: ${{ secrets.server }}
           password: ${{ secrets.password }}
           local_path: './*'
-          remote_path: "/test/"
+          remote_path: "/home/dh_gkeg59/test"
           sftpArgs: '-o ConnectTimeout=5'
 
