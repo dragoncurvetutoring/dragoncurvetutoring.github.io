@@ -10,7 +10,6 @@ on:
       sync:
         description: "File synchronization"
         required: true
-        default: "delta"
 
 jobs:
   deploy-master:
