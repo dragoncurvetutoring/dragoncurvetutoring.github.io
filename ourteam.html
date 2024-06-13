@@ -61,6 +61,30 @@
         $("#footer").load("footer.html")
       })
     </script>
+    <script>
+      function showPopup(id) {
+        document.getElementById(id).style.display = "block"
+      }
+
+      function closePopup(id) {
+        document.getElementById(id).style.display = "none"
+      }
+    </script>
+    <script>
+      function showPopup(id) {
+        document.getElementById(id).style.display = "flex"
+      }
+
+      function closePopup(event) {
+        if (event.target.classList.contains("popup-overlay")) {
+          event.target.style.display = "none"
+        }
+      }
+
+      function closePopupByButton(id) {
+        document.getElementById(id).style.display = "none"
+      }
+    </script>
   </head>
   <body>
     <div id="header"></div>
@@ -83,222 +107,535 @@
               <h4
                 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"
               >
-                <strong>Tutors</strong>
+                <strong>Board of Directors</strong>
               </h4>
             </div>
           </div>
         </div>
-        <div class="row">
-          <div class="item features-image col-12 col-md-6 col-lg-6">
-            <div class="item-wrapper">
+      </div>
+
+      <div class="board-section">
+        <div class="board-container">
+          <div class="row">
+            <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center">
               <div class="item-img mb-3">
                 <img
                   src="assets/images/img-195-1256x1884.jpeg"
-                  alt="Mobirise Website Builder"
-                  title=""
-                  data-slide-to="0"
-                  data-bs-slide-to="0"
+                  alt="Paige Zhu"
+                  onclick="showPopup('paige')"
                 />
               </div>
-              <div class="item-content align-left">
-                <h5 class="item-title mbr-fonts-style mb-3 display-7">
-                  Co-founder
-                </h5>
-                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Paige Zhu</strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                  Paige Zhu is a rising sophomore at Phillips Academy Andover.
-                  She has qualified for the AIME since 6th grade, receiving the
-                  Two Sigma AMC10 Award in 2022 and the D.E Shaw Group AMC8
-                  Certificate in 2023. She has also qualified for MATHCOUNTS
-                  State 3 years in a row, and ranked top 10 as individual. Paige
-                  also served as the school math team captain leading to
-                  MATHCOUNTS state top 3 and Montgomery County middle school
-                  Math League champion. Paige has also been on the Montgomery
-                  County ARML team for two years. Besides math, Paige loves
-                  programming, singing, playing cello and piano. Paige will be
-                  teaching ELMO and AMCS this summer.
-                </p>
+              <div class="item-content text-center">
+                <h5 class="item-title mbr-fonts-style mb-1 display-7">Co-Founder</h5>
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5"><strong>Paige Zhu</strong></h6>
               </div>
             </div>
-          </div>
-          <div class="item features-image col-12 col-md-6 col-lg-6">
-            <div class="item-wrapper">
+            <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center">
               <div class="item-img mb-3">
                 <img
                   src="assets/images/52975714408-cf88af14e4-o-2-1256x1884.jpeg"
-                  alt="Mobirise Website Builder"
-                  title=""
-                  data-slide-to="1"
-                  data-bs-slide-to="1"
+                  alt="Amber Weng"
+                  onclick="showPopup('amber')"
                 />
               </div>
-              <div class="item-content align-left">
-                <h5 class="item-title mbr-fonts-style mb-3 display-7">
-                  Co-founder
-                </h5>
-                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Amber Weng</strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                  Amber Weng is a rising sophomore at Winston Churchill High
-                  School. She is passionate about competition math, physics, and
-                  other STEM related activities. Amber has a lot of experience
-                  tutoring both school and competition math through her
-                  experience working as a math tutor. She is currently the
-                  captain of Churchill's math team. She has qualified for the
-                  AIME, MATHCOUNTS State competition, and has also been an ARML
-                  participant for 3 years. Aside from math, Amber loves doing
-                  robotics and playing the cello. Amber will be teaching ELMO,
-                  MATHCOUNTS, and Science Bowl this summer.<br />
-                </p>
+              <div class="item-content text-center">
+                <h5 class="item-title mbr-fonts-style mb-1 display-7">Co-founder</h5>
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5"><strong>Amber Weng</strong></h6>
               </div>
             </div>
-          </div>
-          <div class="item features-image col-12 col-md-6 col-lg-6">
-            <div class="item-wrapper">
+            <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center">
               <div class="item-img mb-3">
                 <img
                   src="assets/images/IMG_1996.jpg"
-                  alt="Mobirise Website Builder"
-                  title=""
-                  data-slide-to="3"
-                  data-bs-slide-to="4"
+                  alt="Sophie Zhao"
+                  onclick="showPopup('sophie')"
                 />
               </div>
-              <div class="item-content align-left">
-                <h5 class="item-title mbr-fonts-style mb-3 display-7">Outreach Director</h5>
-                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Sophie Zhao</strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mt-3 display-7">
+              <div class="item-content text-center">
+                <h5 class="item-title mbr-fonts-style mb-1 display-7">Outreach Director</h5>
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5"><strong>Sophie Zhao</strong></h6>
+              </div>
+            </div>
+            <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+              <div class="item-img mb-3">
+                <img
+                  src="assets/images/IMG_5370_1.jpeg"
+                  alt="Andy Yan"
+                  onclick="showPopup('andy')"
+                />
+              </div>
+              <div class="item-content text-center">
+                <h5 class="item-title mbr-fonts-style mb-1 display-7">Programs Director</h5>
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5"><strong>Andy Yan</strong></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="paige" class="popup-overlay" onclick="closePopup(event)">
+        <div class="popup">
+          <div class="container">
+            <!-- Full-width name row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                    <strong>Paige Zhu</strong>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- First column with Co-founder and description -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Co-founder</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    Paige Zhu is a rising sophomore at Phillips Academy Andover.
+                    She has qualified for the AIME since 6th grade, receiving the
+                    Two Sigma AMC10 Award in 2022 and the D.E Shaw Group AMC8
+                    Certificate in 2023. She has also qualified for MATHCOUNTS
+                    State 3 years in a row, and ranked top 10 as individual. Paige
+                    also served as the school math team captain leading to
+                    MATHCOUNTS state top 3 and Montgomery County middle school
+                    Math League champion. Paige has also been on the Montgomery
+                    County ARML team for two years. Besides math, Paige loves
+                    programming, singing, playing cello and piano. Paige will be
+                    teaching ELMO and AMCS this summer.
+                  </p>
+                </div>
+              </div>
+              <!-- Second column with Class Teaching and Contact -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Class Teaching</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-5">
+                    <ul class="teaching-list">
+                      <li>ELMO</li>
+                      <li>AMC</li>
+                      <li>Mathcounts</li>
+                    </ul>
+                  </p>
+                  <!-- Add extra space -->
+                  <div style="height: 20px;"></div>
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Contact</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    <a mailto="paigezhu@dragoncurvetutoring.org">paigezhu@dragoncurvetutoring.org</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div id="amber" class="popup-overlay" onclick="closePopup(event)">
+        <div class="popup">
+          <div class="container">
+            <!-- Full-width name row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                    <strong>Amber Weng</strong>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- First column with Co-founder and description -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Co-founder</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    Amber Weng is a rising sophomore at Winston Churchill High
+                    School. She is passionate about competition math, physics, and
+                    other STEM related activities. Amber has a lot of experience
+                    tutoring both school and competition math through her
+                    experience working as a math tutor. She is currently the
+                    captain of Churchill's math team. She has qualified for the
+                    AIME, MATHCOUNTS State competition, and has also been an ARML
+                    participant for 3 years. Aside from math, Amber loves doing
+                    robotics and playing the cello. Amber will be teaching ELMO,
+                    MATHCOUNTS, and Science Bowl this summer.
+                  </p>
+                </div>
+              </div>
+              <!-- Second column with Class Teaching and Contact -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Class Teaching</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-5">
+                    <ul class="teaching-list">
+                      <li>ELMO</li>
+                      <li>Mathcounts</li>
+                      <li>Science Bowl</li>
+                    </ul>
+                  </p>
+                  <!-- Add extra space -->
+                  <div style="height: 20px;"></div>
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Contact</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    <a mailto="amberweng@dragoncurvetutoring.org">amberweng@dragoncurvetutoring.org</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="sophie" class="popup-overlay" onclick="closePopup(event)">
+        <div class="popup">
+          <div class="container">
+            <!-- Full-width name row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                    <strong>Sophie Zhao</strong>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- First column with Co-founder and description -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Outreach Director</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
                   Sophie Zhao is a rising sophomore at Winston Churchill High
                   School. She enjoys biology, chemistry, and math. She has
                   volunteered in her former middle school’s science department
                   for three years and been a member of the math team for two
                   years. She also enjoys reading, golfing, and participating in
                   youth orchestra. Sophie will be teaching Science Bowl this
-                  summer.<br />
-                </p>
+                  summer.
+                  </p>
+                </div>
+              </div>
+              <!-- Second column with Class Teaching and Contact -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Class Teaching</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-5">
+                    <ul class="teaching-list">
+                      <li>Science Bowl</li>
+                    </ul>
+                  </p>
+                  <!-- Add extra space -->
+                  <div style="height: 20px;"></div>
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Contact</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    <a mailto="sophiezhao@dragoncurvetutoring.org">sophiezhao@dragoncurvetutoring.org</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="item features-image col-12 col-md-6 col-lg-6">
-            <div class="item-wrapper">
-              <div class="item-img mb-3">
-                <img
-                  src="assets/images/IMG_5370_1.jpeg"
-                  alt="Mobirise Website Builder"
-                  title=""
-                  data-slide-to="3"
-                  data-bs-slide-to="4"
-                />
+        </div>
+      </div>
+
+      <div id="andy" class="popup-overlay" onclick="closePopup(event)">
+        <div class="popup">
+          <div class="container">
+            <!-- Full-width name row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                    <strong>Andy Yan</strong>
+                  </h6>
+                </div>
               </div>
-              <div class="item-content align-left">
-                <h5 class="item-title mbr-fonts-style mb-3 display-7">Programs Director</h5>
-                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Andy Yan</strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                  Andy Yan is a rising sophomore at Montgomery Blair High
-                  School. He has been on his school's Varsity Math Team since
-                  6th grade and has participated in various competitions,
-                  including MATHCOUNTS, AMC, and ARML. Andy has achieved the
-                  Distinguished Honor Roll in AMC8 multiple times, Distinction
-                  in AMC10, and qualification for AIME. Beyond competition math,
-                  Andy has leadership and tutoring skills through working as a
-                  summer camp counselor for younger children. During his free
-                  time, he enjoys playing clarinet, piano, and tennis. Andy will
-                  be teaching AMCS and Python this summer. <br />
-                </p>
+            </div>
+            <div class="row">
+              <!-- First column with Co-founder and description -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Programs Director</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    Andy Yan is a rising sophomore at Montgomery Blair High
+                    School. He has been on his school's Varsity Math Team since
+                    6th grade and has participated in various competitions,
+                    including MATHCOUNTS, AMC, and ARML. Andy has achieved the
+                    Distinguished Honor Roll in AMC8 multiple times, Distinction
+                    in AMC10, and qualification for AIME. Beyond competition math,
+                    Andy has leadership and tutoring skills through working as a
+                    summer camp counselor for younger children. During his free
+                    time, he enjoys playing clarinet, piano, and tennis. Andy will
+                    be teaching AMCS and Python this summer.
+                  </p>
+                </div>
+              </div>
+              <!-- Second column with Class Teaching and Contact -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Class Teaching</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-5">
+                    <ul class="teaching-list">
+                      <li>AMCS</li>
+                      <li>Python</li>
+                    </ul>
+                  </p>
+                  <!-- Add extra space -->
+                  <div style="height: 20px;"></div>
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Contact</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    <a mailto="andyyan@dragoncurvetutoring.org">andyyan@dragoncurvetutoring.org</a>
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-          <div class="item features-image col-12 col-md-6 col-lg-6">
-            <div class="item-wrapper">
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 content-head">
+            <div class="mbr-section-head mb-5">
+              <h4
+                class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"
+              >
+                <strong>Tutors</strong>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tutor-section">
+        <div class="tutor-container">
+          <div class="row">
+            <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center">
               <div class="item-img mb-3">
                 <img
                   src="assets/images/IMG_4527.png"
-                  alt="Mobirise Website Builder"
-                  title=""
-                  data-slide-to="2"
-                  data-bs-slide-to="2"
+                  alt="Thomas Yao"
+                  onclick="showPopup('thomas')"
                 />
               </div>
-              <div class="item-content align-left">
-                <h5 class="item-title mbr-fonts-style mb-3 display-7">Tutor</h5>
-                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Thomas Yao</strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                  Thomas Yao is a rising sophomore at Montgomery Blair High
+              <div class="item-content text-center">
+                <h5 class="item-title mbr-fonts-style mb-1 display-7">Tutor</h5>
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5"><strong>Thomas Yao</strong></h6>
+              </div>
+            </div>
+            <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+              <div class="item-img mb-3">
+                <img
+                  src="assets/images/IMG_1826.jpg"
+                  alt="Sophiana Jiang"
+                  onclick="showPopup('sophiana')"
+                />
+              </div>
+              <div class="item-content text-center">
+                <h5 class="item-title mbr-fonts-style mb-1 display-7">Tutor</h5>
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5"><strong>Sophiana Jiang</strong></h6>
+              </div>
+            </div>
+            <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+              <div class="item-img mb-3">
+                <img
+                  src="assets/images/IMG_1928.jpg"
+                  alt="Mason Boucher"
+                  onclick="showPopup('mason')"
+                />
+              </div>
+              <div class="item-content text-center">
+                <h5 class="item-title mbr-fonts-style mb-1 display-7">Tutor</h5>
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5"><strong>Mason Boucher</strong></h6>
+              </div>
+            </div>
+            <div class="item features-image col-12 col-md-6 col-lg-3 d-flex flex-column align-items-center">
+              <div class="item-img mb-3">
+              </div>
+              <div class="item-content text-center">
+                <h5 class="item-title mbr-fonts-style mb-1 display-7"></h5>
+                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5"><strong></strong></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="thomas" class="popup-overlay" onclick="closePopup(event)">
+        <div class="popup">
+          <div class="container">
+            <!-- Full-width name row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                    <strong>Thomas Yao</strong>
+                  </h6>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- First column with Co-founder and description -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Tutor</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    Thomas Yao is a rising sophomore at Montgomery Blair High
                   School. He enjoys robotics, and competition math. He has
                   experience teaching math and robotics to elementary school
                   students in the past. He has qualified for AIME and placed in
                   the top 10 at MATHCOUNTS states. Outside of math, Thomas
                   enjoys playing flute and doing random shenanigans. Thomas will
-                  be teaching ELMO and Python this summer.<br />
-                </p>
+                  be teaching ELMO and Python this summer.
+                  </p>
+                </div>
+              </div>
+              <!-- Second column with Class Teaching and Contact -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Class Teaching</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-5">
+                    <ul class="teaching-list">
+                      <li>ELMO</li>
+                      <li>Python</li>
+                    </ul>
+                  </p>
+                  <!-- Add extra space -->
+                  <div style="height: 20px;"></div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="item features-image col-12 col-md-6 col-lg-6">
-            <div class="item-wrapper">
-              <div class="item-img mb-3">
-                <img
-                  src="assets/images/IMG_1826.jpg"
-                  alt="Mobirise Website Builder"
-                  title=""
-                  data-slide-to="2"
-                  data-bs-slide-to="2"
-                />
+        </div>
+      </div>
+
+      <div id="sophiana" class="popup-overlay" onclick="closePopup(event)">
+        <div class="popup">
+          <div class="container">
+            <!-- Full-width name row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                    <strong>Sophiana Jiang</strong>
+                  </h6>
+                </div>
               </div>
-              <div class="item-content align-left">
-                <h5 class="item-title mbr-fonts-style mb-3 display-7">Tutor</h5>
-                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Sophiana Jiang</strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                  Sophiana Jiang is a rising sophomore at Richard Montgomery High School. 
-                  She has enjoyed participating in math competitions since elementary school 
-                  and has earned distinctions in MATHCOUNTS, AMCs, ARML, DMM, and more. 
-                  Currently, she is a dedicated coach for her middle school’s MATHCOUNTS 
-                  team. In her free time, she enjoys swimming, traveling, and spending 
-                  time with her friends and family. Sophiana will be teaching AMCS this 
-                  summer.<br />
-                </p>
+            </div>
+            <div class="row">
+              <!-- First column with Co-founder and description -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Tutor</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    Sophiana Jiang is a rising sophomore at Richard Montgomery
+                    High School. She has enjoyed participating in math
+                    competitions since elementary school and has earned
+                    distinctions in MATHCOUNTS, AMCs, ARML, DMM, and more.
+                    Currently, she is a dedicated coach for her middle school’s
+                    MATHCOUNTS team. In her free time, she enjoys swimming,
+                    traveling, and spending time with her friends and family.
+                    Sophiana will be teaching AMCS this summer.
+                  </p>
+                </div>
+              </div>
+              <!-- Second column with Class Teaching and Contact -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Class Teaching</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-5">
+                    <ul class="teaching-list">
+                      <li>AMCS</li>
+                    </ul>
+                  </p>
+                  <!-- Add extra space -->
+                  <div style="height: 20px;"></div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="item features-image col-12 col-md-6 col-lg-6">
-            <div class="item-wrapper">
-              <div class="item-img mb-3">
-                <img
-                  src="assets/images/IMG_1928.jpg"
-                  alt="Mobirise Website Builder"
-                  title=""
-                  data-slide-to="2"
-                  data-bs-slide-to="2"
-                />
+        </div>
+      </div>
+
+      <div id="mason" class="popup-overlay" onclick="closePopup(event)">
+        <div class="popup">
+          <div class="container">
+            <!-- Full-width name row -->
+            <div class="row">
+              <div class="col-12">
+                <div class="item-content align-left">
+                  <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
+                    <strong>Mason Boucher</strong>
+                  </h6>
+                </div>
               </div>
-              <div class="item-content align-left">
-                <h5 class="item-title mbr-fonts-style mb-3 display-7">Tutor</h5>
-                <h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-                  <strong>Mason Boucher</strong>
-                </h6>
-                <p class="mbr-text mbr-fonts-style mt-3 display-7">
-                  Mason is a rising sophomore at Montgomery Blair High School. 
-                  He enjoys math and programming competitions as well as 
-                  creating original games. Similarly, he plans to attend 
-                  the Cyber-Physical Systems Engineering summer program 
-                  at the University of Maryland. His tutoring experience 
-                  includes teaching elementary students in the DC Steel 
-                  City Codes program for multiple years. Beyond his 
-                  academic pursuits, Mason plays AA hockey and watches an 
-                  embarrassing number of NHL games. Mason will be teaching 
-                  Python this summer.<br />
-                </p>
+            </div>
+            <div class="row">
+              <!-- First column with Co-founder and description -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Tutor</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-7">
+                    Mason is a rising sophomore at Montgomery Blair High School.
+                    He enjoys math and programming competitions as well as
+                    creating original games. Similarly, he plans to attend the
+                    Cyber-Physical Systems Engineering summer program at the
+                    University of Maryland. His tutoring experience includes
+                    teaching elementary students in the DC Steel City Codes
+                    program for multiple years. Beyond his academic pursuits,
+                    Mason plays AA hockey and watches an embarrassing number of
+                    NHL games. Mason will be teaching Python this summer.
+                  </p>
+                </div>
+              </div>
+              <!-- Second column with Class Teaching and Contact -->
+              <div class="col-12 col-md-6">
+                <div class="item-content align-left">
+                  <h5 class="item-title mbr-fonts-style mb-3 display-7">
+                    <strong>Class Teaching</strong>
+                  </h5>
+                  <p class="mbr-text mbr-fonts-style mt-3 display-5">
+                    <ul class="teaching-list">
+                      <li>Python</li>
+                    </ul>
+                  </p>
+                  <!-- Add extra space -->
+                  <div style="height: 20px;"></div>
+                </div>
               </div>
             </div>
           </div>
