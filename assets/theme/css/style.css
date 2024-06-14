@@ -119,9 +119,10 @@ a:hover {
 }
 
 .teaching-list li {
+  font-family: "Inter Tight", sans-serif;
+  font-size: 1.4rem;
   font-style: normal;
   margin-bottom: 5px;
-  font-size: 1.2rem;
   color: #374155;
 }
 
