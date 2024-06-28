@@ -1064,3 +1064,56 @@ blockquote {
   color: blue;
   text-decoration: underline;
 }
+
+.rules-section .item-wrapper {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.rules-section .item-wrapper h5 {
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.rules-section .item-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.rules-section .item-content ul li {
+  margin-bottom: 10px;
+}
+
+.rules-section .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.rules-section .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rules-section .col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.rules-section .col-md-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.rules-section .col-lg-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.rules-section .justify-content-center {
+  justify-content: center;
+}
