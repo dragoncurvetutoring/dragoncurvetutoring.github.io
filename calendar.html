@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Calendar</title>
+    <style>
+        ul {list-style-type: none; padding: 0; margin: 0;}
+        body {font-family: Verdana, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #f0f0f0; margin: 0;}
+
+        /* Container for calendar and event modal */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px; /* Adjust as necessary */
+        }
+
+        /* Calendar container */
+        .calendar-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 45%; /* Adjust as necessary */
+            max-width: 500px;
+        }
+
+        .sidebar {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 25%; /* Adjust as necessary */
+            max-width: 300px;
+            margin-right: 20px;
+        }
+
+        /* Month header */
+        .month {
+            text-align: center;
+            background: #7BA6DC;
+            color: white;
+            padding: 10px;
+            border-radius: 10px 10px 0 0;
+            position: relative;
+        }
+
+        .month ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .month li {
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Previous and next buttons */
+        .month .prev, .month .next {
+            cursor: pointer;
+            user-select: none;
+        }
+
+        /* Weekdays (Mon-Sun) */
+        .weekdays {
+            display: flex;
+            background-color: #ddd;
+        }
+
+        .weekdays li {
+            flex: 1;
+            text-align: center;
+            padding: 10px 0;
+            color: #666;
+        }
+
+        /* Days (1-31) */
+        .days {
+            display: flex;
+            flex-wrap: wrap;
+            background: #eee;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .days li {
+            width: calc(101% / 7.5); 
+            text-align: center;
+            padding: 10px 0;
+            margin: 2px 2px;
+            font-size: 2px 0;
+            color: #777;
+            position: relative;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            box-sizing: border-box;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Highlight the "current" day */
+        .days li .active {
+            background: #1abc9c;
+            color: white !important;
+        }
+
+        /* Highlight days with events */
+        .days li.has-events {     
+            background-color: #7BA6DC;
+            color: #fff;
+        }
+
+        /* Event modal */
+        .event-modal {
+            display: none; /* Hidden by default */
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align to the top of the container */
+            width: 30%; /* Same width as the calendar */
+            max-width: 500px;
+            margin-left: 20px; /* Space between the calendar and modal */
+        }
+
+        .event-modal-content {
+            background-color: #fefefe;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%; /* Full width of the modal */
+            max-height: 80%; /* Max height */
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px; /* Space from the top */
+        }
+
+        .modal-date {
+            font-size: 24px;
+            color: #7BA6DC;
+            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .close-button {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Adjustments for smaller screens */
+        @media (max-width: 600px) {
+            .event-modal-content {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Filters</h2>
+            <label for="timeFilter">Filter by time:</label>
+            <select id="timeFilter" onchange="filterEventsByTime()">
+                <option value="all">All</option>
+                <option value="3pm">3 PM</option>
+                <option value="4pm">4 PM</option>
+                <option value="5pm">5 PM</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="calendar-container">
+            <div class="month">
+                <ul>
+                    <li class="prev" onclick="prevMonth()">&#10094;</li>
+                    <li id="monthYear">June<br><span style="font-size:18px">2024</span></li>
+                    <li class="next" onclick="nextMonth()">&#10095;</li>
+                </ul>
+            </div>
+
+            <ul class="weekdays">
+                <li>Su</li>
+                <li>Mo</li>
+                <li>Tu</li>
+                <li>We</li>
+                <li>Th</li>
+                <li>Fr</li>
+                <li>Sa</li>
+            </ul>
+
+            <ul class="days" id="calendarDays">
+                <!-- Calendar days will be dynamically inserted here -->
+            </ul>
+        </div>
+
+        <!-- Event modal -->
+        <div id="eventModal" class="event-modal" style="display: none;">
+            <div class="event-modal-content">
+                <span class="close-button" onclick="closeModal()">&times;</span>
+                <h2 class="modal-date" id="modalDate"></h2>
+                <div>
+                    <label for="timeFilter">Filter by time:</label>
+                    <select id="timeFilter" onchange="filterEventsByTime()">
+                        <option value="all">All</option>
+                        <option value="3pm">3 PM</option>
+                        <option value="4pm">4 PM</option>
+                        <option value="5pm">5 PM</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div id="eventList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let currentMonth = new Date().getMonth();
+        let currentYear = new Date().getFullYear();
+
+        // Sample events (replace with your own data)
+        const events = {
+            2024: {
+                7: {
+                    1: ["ELMO Session 1 - 4PM"],
+                    2: ["Science Bowl - 5PM"],
+                    3: ["ELMO Session 1 - 4PM", "Science Bowl - 5PM"],
+                    5: ["ELMO Session 1 - 4PM", "Science Bowl - 5PM"],
+                    8: ["Introduction to CAD - 3PM", "ELMO Session 1 - 4PM"],
+                    9: ["Introduction to CAD - 3PM", "Science Bowl - 5PM"],
+                    10: ["Introduction to CAD - 3PM", "ELMO Session 1 - 4PM", "Science Bowl - 5PM"],
+                    11: ["Introduction to CAD - 3PM"],
+                    12: ["ELMO Session 1 - 4PM", "Science Bowl - 5PM"],
+                    15: ["MATHCOUNTS Session 1 - 3PM", "ELMO Session 2 - 4PM"],
+                    16: ["Science Bowl - 5PM"],
+                    17: ["MATHCOUNTS Session 1 - 3PM", "ELMO Session 2 - 4PM", "Science Bowl - 5PM"],
+                    19: ["MATHCOUNTS Session 1 - 3PM", "ELMO Session 2 - 4PM", "Science Bowl - 5PM"],
+                    22: ["MATHCOUNTS Session 1 - 3PM", "ELMO Session 2 - 4PM", "Python - 5PM"],
+                    24: ["MATHCOUNTS Session 1 - 3PM", "ELMO Session 2 - 4PM", "Python - 5PM"],
+                    26: ["MATHCOUNTS Session 1 - 3PM", "ELMO Session 2 - 4PM", "Python - 5PM"],
+                    29: ["AMCS 1 - 4PM", "Python - 5PM"],
+                    31: ["AMCS 1 - 4PM", "Python - 5PM"],
+                }, 8: {
+                    2: ["AMCS 1 - 4PM", "Python - 5PM"],
+                    5: ["AMCS 1 - 4PM"],
+                    7: ["AMCS 1 - 4PM"],
+                    9: ["AMCS 1 - 4PM"],
+                    12: ["AMCS 2 - 4PM"],
+                    14: ["AMCS 2 - 4PM"],
+                    16: ["AMCS 2 - 4PM"],
+                    19: ["AMCS 2 - 4PM"],
+                    21: ["AMCS 2 - 4PM"],
+                    23: ["AMCS 2 - 4PM"],
+                    24: ["Dragon Curve Cup - 11AM to 5PM"]
+                }
+            }
+        };
+
+        function renderCalendar(month, year) {
+            const monthYear = document.getElementById('monthYear');
+            const calendarDays = document.getElementById('calendarDays');
+
+            monthYear.innerHTML = `${monthNames[month]}<br><span style="font-size:18px">${year}</span>`;
+            calendarDays.innerHTML = '';
+
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+            const daysOffset = (firstDay === 0) ? 6 : firstDay;
+            for (let i = 0; i < daysOffset; i++) {
+                calendarDays.innerHTML += `<li></li>`;
+            }
+
+            
+
+            for (let day = 1; day <= daysInMonth; day++) {
+                const eventsForDay = (events[year] && events[year][month + 1] && events[year][month + 1][day]) || [];
+                const hasEventsClass = eventsForDay.length > 0 ? 'has-events' : '';
+                calendarDays.innerHTML += `<li onclick="openModal(${day})" class="${hasEventsClass}">${day}</li>`;
+            }
+        }
+
+        function styleClickedDay(day) {
+            // Reset styles for all days
+            const allDays = document.querySelectorAll('.days li');
+            allDays.forEach(day => {
+                day.style.backgroundColor = ''; // Reset background color
+                day.style.color = ''; // Reset text color
+                day.style.border = '1px solid transparent'; // Reset border
+            });
+
+            // Apply new styles to the clicked day
+            day.style.backgroundColor = 'transparent';
+            day.style.color = '#7BA6DC';
+            day.style.border = '2px solid #7BA6DC'; // Thicker border
+        }
+
+        function resetDayStyles() {
+            const allDays = document.querySelectorAll('.days li');
+            allDays.forEach(day => {
+                day.style.backgroundColor = ''; // Reset background color
+                day.style.color = ''; // Reset text color
+                day.style.border = '1px solid transparent'; // Reset border
+            });
+        }
+
+        function filterEventsByTime() {
+        const timeFilter = document.getElementById('timeFilter').value;
+        const eventsForDay = getEventsForDay(currentYear, currentMonth + 1, selectedDay); // Use the selected day stored globally
+        const filteredEvents = eventsForDay.filter(event => {
+            const eventTime = parseEventTime(event); // Function to extract the time from event
+            switch (timeFilter) {
+                case '3pm':
+                    return eventTime === 15;
+                case '4pm':
+                    return eventTime === 16;
+                case '5pm':
+                    return eventTime === 17;
+                case 'other':
+                    return eventTime !== 15 && eventTime !== 16 && eventTime !== 17;
+                default:
+                    return true;
+            }
+        });
+        displayEvents(filteredEvents);
+    }
+
+    function parseEventTime(event) {
+        const timeMatch = event.match(/(\d{1,2})(?::\d{2})?\s*(AM|PM)/i);
+        if (!timeMatch) return -1;
+        let [ , hour, period ] = timeMatch;
+        hour = parseInt(hour, 10);
+        if (period.toUpperCase() === 'PM' && hour < 12) hour += 12;
+        if (period.toUpperCase() === 'AM' && hour === 12) hour = 0;
+        return hour;
+    }
+
+    function getEventsForDay(year, month, day) {
+        return (events[year] && events[year][month] && events[year][month][day]) || [];
+    }
+
+    function displayEvents(events) {
+        const eventList = document.getElementById('eventList');
+        eventList.innerHTML = events.map(event => `<p>${event}</p>`).join('');
+    }
+
+    let selectedDay = null; // Store the selected day globally
+
+    function openModal(day) {
+        selectedDay = day; // Set the selected day
+        const eventModal = document.getElementById('eventModal');
+        const modalDate = document.getElementById('modalDate');
+        modalDate.textContent = `${monthNames[currentMonth]} ${day}, ${currentYear}`;
+        modalDate.style.color = '#7BA6DC';
+
+        const eventsForDay = getEventsForDay(currentYear, currentMonth + 1, day);
+        displayEvents(eventsForDay);
+        eventModal.style.display = 'flex';
+        eventModal.style.left = document.querySelector('.calendar-container').offsetWidth + 20 + 'px';
+
+        const dayElements = document.querySelectorAll('.days li');
+        const clickedDayElement = Array.from(dayElements).find(el => el.innerText == day);
+        styleClickedDay(clickedDayElement);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        renderCalendar(currentMonth, currentYear);
+    });
+
+
+
+        function closeModal() {
+            const eventModal = document.getElementById('eventModal');
+            eventModal.style.display = 'none';
+            resetDayStyles(); // Reset styles when modal is closed
+        }
+
+        // Example event to close the modal when clicking outside of it
+        window.addEventListener('click', function(event) {
+            const eventModal = document.getElementById('eventModal');
+            if (event.target == eventModal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCalendar(currentMonth, currentYear);
+        });
+
+        function prevMonth() {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            renderCalendar(currentMonth, currentYear);
+        }
+
+        function nextMonth() {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar(currentMonth, currentYear);
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderCalendar(currentMonth, currentYear);
+        });
+    </script>
+</body>
+</html>
