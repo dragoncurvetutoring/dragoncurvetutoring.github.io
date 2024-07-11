@@ -61,127 +61,148 @@
         $("#footer").load("footer.html")
       })
     </script>
+    <script>
+      function filterImages() {
+        var camp = document.getElementById("campFilter").value;
+        var items = document.getElementsByClassName("gallery-image");
+        for (var i = 0; i < items.length; i++) {
+          if (camp === "all" || items[i].getAttribute("data-camp") === camp) {
+            items[i].style.display = "block";
+          } else {
+            items[i].style.display = "none";
+          }
+        }
+      }
+    </script>
   </head>
-<body>
-
-  <section
-      data-bs-version="5.1"
-      class="image4 cid-tQfkJyeyGn"
-      id="image04-18"
-    >
+  <body>
+    <section data-bs-version="5.1" class="image4 cid-tQfkJyeyGn" id="image04-18">
       <div class="image-block m-auto">
-        <img src="assets/images/gallery.png"/>
+        <img src="assets/images/gallery.png" />
       </div>
     </section>
 
-<section data-bs-version="5.1" class="article12 cid-tQa5Az6qaJ" id="gallery02-1r">
-    <div class="container-fluid">
+    <section data-bs-version="5.1" class="article12 cid-tQa5Az6qaJ" id="gallery02-1r">
+      <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-12 content-head">
-                <div class="mbr-section-head mb-5">
-                    <h3 class="mbr-section-title mbr-fonts-style align-center m-0 display-2"><strong>Summer 2024 Gallery</strong></h3>
-                    <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">Pictures from our summer 2024 camp!</h4>
-                </div>
+          <div class="col-12 content-head">
+            <div class="mbr-section-head mb-5">
+              <h3 class="mbr-section-title mbr-fonts-style align-center m-0 display-2">
+                <strong>Summer 2024 Gallery</strong>
+              </h3>
+              <h4 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-4 display-7">
+                Pictures from our summer 2024 camp!
+              </h4>
             </div>
+          </div>
         </div>
-        <div class="row mbr-gallery mbr-masonry" data-masonry="{&quot;percentPosition&quot;: true }">
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+
+        <div class="row justify-content-center mb-4">
+          <div class="col-12 col-md-6">
+            <select id="campFilter" class="form-select" onchange="filterImages()">
+              <option value="all">All Camps</option>
+              <option value="elmo1">ELMO Session 1</option>
+              <option value="scibowl">Science Bowl</option>
+              <option value="cad">Introduction to CAD</option>
+            </select>
+          </div>
+        </div>
+        <div class="row mbr-gallery mbr-masonry" data-masonry='{ "percentPosition": true }'>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="scibowl">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
                     <img class="w-100" src="assets/images/DSC01178.JPG" data-slide-to="0" data-bs-slide-to="0" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-                </div>
+                </div><br><br>
                 
             </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="scibowl">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
                     <img class="w-100" src="assets/images/DSC01190.JPG" data-slide-to="1" data-bs-slide-to="1" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-                </div>
+                </div><br><br>  
                 
             </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp=scibowl">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
                     <img class="w-100" src="assets/images/DSC01198.JPG" data-slide-to="2" data-bs-slide-to="2" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-                </div>
+                </div><br><br>  
                 
             </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="scibowl">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
                     <img class="w-100" src="assets/images/DSC01201.JPG" data-slide-to="3" data-bs-slide-to="3" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-                </div>
-
-            <br><br>
+                </div><br><br>
                 
             </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="elmo1">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
                     <img class="w-100" src="assets/images/DSC01218.JPG" data-slide-to="4" data-bs-slide-to="4" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-                </div>
+                </div><br><br>  
                 
             </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="scibowl">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
                     <img class="w-100" src="assets/images/DSC01222.JPG" data-slide-to="5" data-bs-slide-to="5" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-                </div>
+                </div><br><br>  
                 
-            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            </div><div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="scibowl">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
                     <img class="w-100" src="assets/images/DSC01204.jpg" data-slide-to="6" data-bs-slide-to="6" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-                </div>
+                </div><br><br>  
                 
             </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="scibowl">
                 <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
                     <img class="w-100" src="assets/images/DSC01188.jpg" data-slide-to="7" data-bs-slide-to="7" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-                </div>
-                
+                </div><br><br>  
+
             </div>
-            <div class="col-12 col-md-6 col-lg-3 item gallery-image">
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="cad">
               <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
                   <img class="w-100" src="assets/images/DSC01226.JPG" data-slide-to="8" data-bs-slide-to="8" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-              </div>
+              </div><br><br>  
               
           </div>
-          <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-            <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
-                <img class="w-100" src="assets/images/DSC01228.JPG" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-            </div>
-            
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-          <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
-              <img class="w-100" src="assets/images/DSC01229.JPG" data-slide-to="10" data-bs-slide-to="10" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="cad">
+              <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
+                  <img class="w-100" src="assets/images/DSC01228.JPG" data-slide-to="9" data-bs-slide-to="9" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
+              </div><br><br>  
+              
           </div>
-          
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-        <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
-            <img class="w-100" src="assets/images/DSC01230.JPG" data-slide-to="11" data-bs-slide-to="11" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-        </div>
-        
-    </div>
-      <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-        <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
-            <img class="w-100" src="assets/images/DSC01231.JPG" data-slide-to="12" data-bs-slide-to="12" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-        </div>
-        
-    </div>
-      <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-        <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
-            <img class="w-100" src="assets/images/DSC01232.JPG" data-slide-to="13" data-bs-slide-to="13" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-        </div>
-        
-    </div>
-      <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-        <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
-            <img class="w-100" src="assets/images/DSC01234.JPG" data-slide-to="14" data-bs-slide-to="14" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-        </div>
-        
-      </div>
-      <div class="col-12 col-md-6 col-lg-3 item gallery-image">
-        <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
-            <img class="w-100" src="assets/images/DSC01237.JPG" data-slide-to="15" data-bs-slide-to="15" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
-        </div>
-        
-    </div>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="cad">
+              <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
+                  <img class="w-100" src="assets/images/DSC01229.JPG" data-slide-to="10" data-bs-slide-to="10" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
+              </div><br><br>  
+              
+          </div>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="cad">
+              <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
+                  <img class="w-100" src="assets/images/DSC01230.JPG" data-slide-to="11" data-bs-slide-to="11" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
+              </div><br><br>    
+                          
+          </div>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="elmo1">
+              <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
+                  <img class="w-100" src="assets/images/DSC01231.JPG" data-slide-to="12" data-bs-slide-to="12" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
+              </div><br><br>  
+              
+          </div>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="elmo1">
+              <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
+                  <img class="w-100" src="assets/images/DSC01232.JPG" data-slide-to="13" data-bs-slide-to="13" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
+              </div><br><br>  
+              
+          </div>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="elmo1"> 
+              <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
+                  <img class="w-100" src="assets/images/DSC01234.JPG" data-slide-to="14" data-bs-slide-to="14" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
+              </div><br><br>  
+              
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 item gallery-image" data-camp="elmo1">
+              <div class="item-wrapper" data-toggle="modal" data-bs-toggle="modal" data-target="#uhIjqHNwpX-modal" data-bs-target="#uhIjqHNwpX-modal">
+                  <img class="w-100" src="assets/images/DSC01237.JPG" data-slide-to="15" data-bs-slide-to="15" data-target="#lb-uhIjqHNwpX" data-bs-target="#lb-uhIjqHNwpX">
+              </div><br><br>  
+              
+          </div>
       </div>
     </div>
 </section>
