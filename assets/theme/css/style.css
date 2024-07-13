@@ -1150,7 +1150,7 @@ blockquote {
 }
 
 /* Weekdays (Sun-Sat) */
-.weekdays ul {
+.weekdays {
   list-style: none;
   display: flex;
   background-color: #ddd;
