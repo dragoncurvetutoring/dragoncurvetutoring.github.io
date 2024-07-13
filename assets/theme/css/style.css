@@ -1095,7 +1095,7 @@ blockquote {
 .calendarside-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   max-width: 1200px;
 }
@@ -1130,6 +1130,7 @@ blockquote {
 }
 
 .month ul {
+  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1149,7 +1150,8 @@ blockquote {
 }
 
 /* Weekdays (Sun-Sat) */
-.weekdays {
+.weekdays ul {
+  list-style: none;
   display: flex;
   background-color: #ddd;
 }
