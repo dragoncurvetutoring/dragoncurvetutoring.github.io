@@ -91,6 +91,23 @@
         $("#footer").load("footer.html")
       })
     </script>
+
+    <style>
+      .tutor-section .item-img {
+        width: 300px; /* Set a fixed width */
+        height: 300px; /* Set the same height to make it square */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden; /* Ensures images don’t overflow */
+      }
+
+      .tutor-section .item-img img {
+        width: 100%; /* Ensures image fills the container */
+        height: 100%; /* Forces square shape */
+        object-fit: cover; /* Prevents distortion, fills square */
+      }
+    </style>
   </head>
   <body>
     <div id="header"></div>
