@@ -1299,3 +1299,13 @@ blockquote {
   width: 100%;
   height: auto;
 }
+
+@media (max-width: 576px) {
+  .sponsor-heading {
+    font-size: 1.0rem !important; /* About 20px */
+  }
+
+ .sponsor-subtitle {
+      font-size: 0.9rem !important; /* ~14.4px */
+    }
+}
