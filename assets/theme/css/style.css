@@ -1300,7 +1300,7 @@ blockquote {
   height: auto;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 800x) {
   .sponsor-heading {
     font-size: 1.0rem !important; /* About 20px */
   }
